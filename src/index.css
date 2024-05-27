@@ -25,3 +25,11 @@ h4{
 #barbg{
   background:rgba(255, 255, 255, 0.685)
 }
+
+.bar:hover{
+fill:rgb(44, 44, 133)
+}
+
+title{
+  background:black
+}
