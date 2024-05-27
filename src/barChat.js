@@ -29,7 +29,6 @@ export default function BarChat(props){
                           .attr("data-date",d => (d[0]))
                           .attr("data-gdp",d => d[1])
                           .append("title")
-                          .attr("id","tooltip")
                           .append("text")
                           .text(d => d[0]+", "+d[1])
   )
