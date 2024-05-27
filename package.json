@@ -2,6 +2,7 @@
   "name": "bar-chat-us-gdp",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://github.io/Geomorpholog/bar-chat-us-gdp",
   "dependencies": {
     "@expo-google-fonts/crimson-text": "^0.2.3",
     "@fontsource/bitter": "^5.0.18",

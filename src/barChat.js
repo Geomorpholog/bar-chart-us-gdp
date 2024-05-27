@@ -11,10 +11,10 @@ export default function BarChat(props){
   useEffect(() => {
     h.current = d3.scaleLinear([d3.min(dataSet,(d) => d[1]),d3.max(dataSet,(d) => d[1])],[10,props.height - props.padding*2]);
     y.current = d3.scaleLinear([d3.min(dataSet,(d) => d[1]),d3.max(dataSet,(d) => d[1])],[props.height - props.padding*2,10]);
-    x.current = d3.scaleBand(dataSet.filter((d,i) => i%20 === 0).map(d => new Date(d[0]).getFullYear()),[props.padding,props.width-props.padding])
+    x.current = d3.scaleBand(dataSet.map((d => d[0])).filter((d,i) => i%25 ===0),[props.padding,props.width-props.padding],true)
     w.current = (props.width - props.padding*2)/dataSet.length;
   });
-  console.log(dataSet.filter((d,i) => i%20 === 0).map(d => new Date(d[0]).getFullYear()))
+  console.log(dataSet)
   useEffect(() => void d3.select(bg.current)
                           .selectAll("rect")
                           .data(dataSet)
@@ -26,9 +26,10 @@ export default function BarChat(props){
                           .attr("width",w.current)
                           .attr("height",d => h.current(d[1]))
                           .attr("class","bar")
-                          .attr("data-date",d => new Date(d[0]))
-                          .attr("data-GDP",d => d[1])
+                          .attr("data-date",d => (d[0]))
+                          .attr("data-gdp",d => d[1])
                           .append("title")
+                          .attr("id","tooltip")
                           .append("text")
                           .text(d => d[0]+", "+d[1])
   )
@@ -38,6 +39,7 @@ export default function BarChat(props){
                          .attr("transform", "translate(0," + (props.height - props.padding) + ")")
                          .call(d3.axisBottom(x.current))
                          .attr("id","x-axis")
+                         
 
   ) 
   useEffect(() => void d3.select(bg.current) 

@@ -4,6 +4,7 @@ export default function App(props){
 
 return(
       <div id = "background">
+         
         <div id ="app">
             <h4 id = "title">United States GDP</h4>
            <GetData 
