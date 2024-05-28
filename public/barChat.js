@@ -1,11 +1,14 @@
 import dataSet from "./getData.js"
 
 d3.select("body")
-  .append("svg")
-  .data(dataSet)
-  .enter()
-  .slectAll("rect")
-  .append("rect")
+  
+  .append("text")
+  .text()
+                          
+function text(data){
+ // console.log(data)
+}                  
+text(dataSet)       
   
   
   
