@@ -26,7 +26,7 @@
          let padding = 50;
          if (window.screen.width < 1200){
             width = window.screen.width;
-            height = window.screen.height;
+            height = window.screen.height - 50;
             padding = 30;
          }
          let h = d3.scaleLinear([0,d3.max(dataSet,(d) => d[1])],[0,height - padding*2]);
