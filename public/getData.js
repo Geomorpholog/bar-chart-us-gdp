@@ -1,5 +1,5 @@
 let dataSet
-let header = new Headers().append("Content-Type","texy/script")
+let header = new Headers().append("Content-Type","text/script")
 fetch(
      'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json',
      {header}
