@@ -30,6 +30,13 @@ fill:rgb(44, 44, 133)
 }
 
 #tooltip{
-
 font-size:2rem
+}
+@media(max-width:1200px){
+  h4{
+    font-size:2rem;
+  }
+#tooltip{
+font-size:1rem
+}
 }
