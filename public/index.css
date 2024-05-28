@@ -1,7 +1,7 @@
 *{
   box-sizing:border-box;
   font-size:12.5px;
-  font-family:"Oswald";
+  font-family:"Oswald",sans-serif;
   text-align:center;
   margin:0px;
   padding:0px;
@@ -15,17 +15,21 @@ body{
   background-attachment: fixed;
   background-size: cover;
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+
 h4{
   font-size:4rem;
-}
-#barbg{
-  background:rgba(255, 255, 255, 0.685)
 }
 
 .bar:hover{
 fill:rgb(44, 44, 133)
+}
+
+#tooltip{
+
+font-size:2rem
 }
