@@ -1,4 +1,4 @@
-import dataSet from "./getData.js"
+import dataSet from "getData.js"
   let width = 1200;
   let height = 700;
   let padding = 50;
