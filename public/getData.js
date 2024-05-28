@@ -1,11 +1,12 @@
-let dataSet
+
 let header = new Headers().append("Content-Type","text/script")
-let get = fetch(
+let data = await fetch(
      'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json',
      {header}    
 )
-     .then((response) =>{return response.json()})
-     .then((data) => dataSet = data)
 
+let dataJSON = await data.json()
+let dataSet = dataJSON["data"]
+     
 export default dataSet
 console.log(dataSet)
